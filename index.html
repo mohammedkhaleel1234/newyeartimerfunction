@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="image">
+        
+        <img src="assets/images/19539078_6147449 (1).jpg" alt="" class="pic1">
+        <h1 id="output"></h1>
+        
+    </div>
+    <div class="pic2">
+        <img src="assets/images/image123-removebg-preview.png" alt="" class="pic3">
+    </div>
+    <div class="pic4">
+        <img src="assets/images/image1234-removebg-preview.png" alt="" class="pic5">
+    </div>
+    
+    
+
+    <script id="output">
+        let outputpassing = document.getElementById("output");
+        setInterval(()=>{
+            let date = new Date();
+        let hours = date.getHours();
+        let minutes = date.getMinutes();        
+        let seconds = date.getSeconds();
+        let ampm = hours >=12 ? "PM" : "AM";
+        let timing = minutes <10 ? "0" +minutes:minutes;
+        let timingone = seconds <10 ? "0" +seconds:seconds;
+        let timingtwo = hours <10 ? "0" +hours:hours;
+
+        
+        let total = timingtwo+":"+timing+":"+timingone+":"+ampm;    
+        outputpassing.innerHTML = total;
+
+        },"1000")
+        
+
+    </script>
+
+</body>
+</html>
